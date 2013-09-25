@@ -1,0 +1,5 @@
+.panel.panel-default
+  .panel-heading
+    %h3.panel-title= "Comment posted #{time_ago_in_words(comment.created_at)} ago"
+  .panel-body
+    %p= comment.body

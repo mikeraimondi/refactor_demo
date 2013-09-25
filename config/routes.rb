@@ -1,7 +1,11 @@
 RefactorDemo::Application.routes.draw do
-  resources :comments
+  resources :posts, except: [:edit] do
+    resources :comments, except: [:index, :edit, :update]
+  end
 
-  resources :posts
+  root 'posts#index'
+
+  get '/trash' => 'main_pages#trash', as: :trash
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %title RefactorDemo
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body
+    %h1= link_to('Overused Example Blog', root_path)
+    = link_to('New Post', new_post_path)
+    %hr
+
+    = yield
+
+    %hr
+    = link_to('Deleted posts', trash_path)

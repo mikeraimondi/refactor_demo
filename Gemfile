@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
+gem 'haml-rails'
+gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
+gem 'simple_form', github: 'plataformatec/simple_form'
 
 # Use postgresql as the database for Active Record
 gem 'pg'

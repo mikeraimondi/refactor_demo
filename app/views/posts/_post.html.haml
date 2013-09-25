@@ -1,0 +1,6 @@
+%article
+  %header
+    %h3= link_to(post.title, post)
+    = link_to('Comment', new_post_comment_path(post))
+  %p= post.body
+  = link_to('Delete post', post, method: :delete)
